@@ -1,0 +1,13 @@
+@import './variable.scss';
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "card card"
+}
+
+.card{
+    width: $cardWidth;
+}
