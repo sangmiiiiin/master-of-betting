@@ -4,10 +4,21 @@ main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: 
-        "card card"
+    place-items: center;
+    padding: $cardPadding;
+
+    @media screen and (max-width: 576px){
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card{
+        width: $cardWidth;
+    
+        @media screen and (max-width: 576px){
+            width: 60vw;
+            margin-top: 5vh;
+        }
+    }
 }
 
-.card{
-    width: $cardWidth;
-}
