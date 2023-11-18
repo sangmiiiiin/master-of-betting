@@ -1,5 +1,4 @@
 @import './variable.scss';
-
 main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -9,16 +8,29 @@ main{
 
     @media screen and (max-width: 576px){
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2%;
+        grid-row-gap: 4%;
     }
 
     .card{
         width: $cardWidth;
-    
+        border: 0px;
+        .cardImg{
+            height: 25vh;
+        }
+        .cardBody{
+            background-color: #263238;
+            color: #fff;
+        }
         @media screen and (max-width: 576px){
-            width: 60vw;
-            margin-top: 5vh;
+            width: 45vw;
+
+
         }
     }
 }
 
+a {
+    text-decoration: none;
+}
